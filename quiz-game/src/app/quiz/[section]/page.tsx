@@ -1,3 +1,5 @@
+
+// This is a client component. Do NOT use Promise for params here.
 "use client";
 
 import { useEffect, useState } from "react";
@@ -11,19 +13,16 @@ function shuffle<T>(array: T[]): T[] {
 }
 
 
+
 interface Question {
   question: string;
   options: string[];
   answer: string;
 }
 
-interface PageProps {
-  params: {
-    section: string;
-  };
-}
 
-export default function Page({ params }: PageProps) {
+
+export default function Page({ params }: { params: { section: string } }) {
   const router = useRouter();
   const { section } = params;
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -69,8 +68,10 @@ export default function Page({ params }: PageProps) {
     }
   }, [selected]);
 
+
   if (loading) return <div className="flex justify-center items-center min-h-screen">Loading...</div>;
   if (error) return <div className="flex justify-center items-center min-h-screen text-red-500">{error}</div>;
+  if (!questions.length) return null;
 
   const q = questions[current];
 
