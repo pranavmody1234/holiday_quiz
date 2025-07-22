@@ -6,7 +6,7 @@ import path from "path";
 function getCsvPath(category: string) {
   // Sanitize category to avoid path traversal
   const safeCategory = category.replace(/[^a-zA-Z0-9_-]/g, "");
-  return path.join(process.cwd(), "..", "public", `leaderboard_${safeCategory}.csv`);
+  return path.join(process.cwd(), "public", `leaderboard_${safeCategory}.csv`);
 }
 
 function parseCSV(data: string) {
