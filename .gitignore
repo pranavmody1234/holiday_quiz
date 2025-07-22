@@ -1,0 +1,13 @@
+# Ignore config files
+*.env
+*.local
+*.config.*
+.env.*
+# Ignore OS and editor files
+.DS_Store
+node_modules/
+# Ignore build output
+.next/
+out/
+# Ignore CSV leaderboard files (optional, if you don't want to track them)
+public/leaderboard_*.csv

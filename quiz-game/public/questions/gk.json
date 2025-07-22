@@ -1,0 +1,22 @@
+[
+  {"question": "When is Christmas celebrated?", "options": ["December 25", "January 1", "October 31", "November 24"], "answer": "December 25"},
+  {"question": "Which festival is known as the Festival of Lights?", "options": ["Diwali", "Eid", "Hanukkah", "Both Diwali and Hanukkah"], "answer": "Both Diwali and Hanukkah"},
+  {"question": "What is the main color associated with St. Patrick's Day?", "options": ["Red", "Green", "Blue", "Yellow"], "answer": "Green"},
+  {"question": "Which holiday is celebrated with fireworks in the USA on July 4th?", "options": ["Thanksgiving", "Christmas", "Independence Day", "Labor Day"], "answer": "Independence Day"},
+  {"question": "What is the traditional flower for Easter?", "options": ["Rose", "Lily", "Tulip", "Daisy"], "answer": "Lily"},
+  {"question": "Which animal is associated with Chinese New Year?", "options": ["Dragon", "Rabbit", "Tiger", "All of the above"], "answer": "All of the above"},
+  {"question": "What is the main symbol of Hanukkah?", "options": ["Menorah", "Star", "Tree", "Bell"], "answer": "Menorah"},
+  {"question": "Which holiday is known for trick-or-treating?", "options": ["Halloween", "Thanksgiving", "Christmas", "Easter"], "answer": "Halloween"},
+  {"question": "What is the main food eaten on Thanksgiving in the USA?", "options": ["Turkey", "Ham", "Chicken", "Fish"], "answer": "Turkey"},
+  {"question": "Which country is famous for celebrating Carnival before Lent?", "options": ["Brazil", "USA", "Italy", "France"], "answer": "Brazil"},
+  {"question": "What is the main color of Valentine’s Day?", "options": ["Red", "Green", "Blue", "Yellow"], "answer": "Red"},
+  {"question": "Which holiday is associated with the dreidel game?", "options": ["Hanukkah", "Christmas", "Eid", "Diwali"], "answer": "Hanukkah"},
+  {"question": "What is the main symbol of Easter?", "options": ["Egg", "Pumpkin", "Turkey", "Tree"], "answer": "Egg"},
+  {"question": "Which holiday is known as the Festival of Colors?", "options": ["Holi", "Diwali", "Eid", "Christmas"], "answer": "Holi"},
+  {"question": "Which country is known for the holiday 'Day of the Dead'?", "options": ["Mexico", "Spain", "Italy", "France"], "answer": "Mexico"},
+  {"question": "What is the main food for Passover?", "options": ["Matzah", "Bread", "Rice", "Pasta"], "answer": "Matzah"},
+  {"question": "Which holiday is celebrated on October 31st?", "options": ["Halloween", "Thanksgiving", "Christmas", "Easter"], "answer": "Halloween"},
+  {"question": "What is the main symbol of Ramadan?", "options": ["Crescent moon", "Star", "Tree", "Egg"], "answer": "Crescent moon"},
+  {"question": "Which holiday is known for lighting candles for 8 nights?", "options": ["Hanukkah", "Diwali", "Christmas", "Eid"], "answer": "Hanukkah"},
+  {"question": "Which holiday is celebrated with a maypole dance?", "options": ["May Day", "Christmas", "Easter", "Halloween"], "answer": "May Day"}
+] 

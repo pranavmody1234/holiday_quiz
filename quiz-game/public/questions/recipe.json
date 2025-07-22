@@ -1,0 +1,22 @@
+[
+  {"question": "Which ingredient is essential in a traditional Christmas pudding?", "options": ["Rice", "Raisins", "Potatoes", "Pumpkin"], "answer": "Raisins"},
+  {"question": "What is the main ingredient in Hanukkah latkes?", "options": ["Potato", "Carrot", "Beef", "Apple"], "answer": "Potato"},
+  {"question": "Which spice is commonly used in gingerbread cookies?", "options": ["Cumin", "Ginger", "Paprika", "Basil"], "answer": "Ginger"},
+  {"question": "What is the main ingredient in eggnog?", "options": ["Eggs", "Milk", "Cream", "All of the above"], "answer": "All of the above"},
+  {"question": "Which fruit is traditionally used in a Christmas cake?", "options": ["Banana", "Apple", "Dried fruits", "Orange"], "answer": "Dried fruits"},
+  {"question": "What is a Buche de Noel?", "options": ["A French Yule log cake", "A German bread", "An Italian pie", "A Spanish flan"], "answer": "A French Yule log cake"},
+  {"question": "Which nut is commonly found in holiday biscotti?", "options": ["Almond", "Peanut", "Walnut", "Cashew"], "answer": "Almond"},
+  {"question": "What is the main filling in a mince pie?", "options": ["Meat", "Fruit", "Cheese", "Chocolate"], "answer": "Fruit"},
+  {"question": "Which sauce is traditionally served with roast turkey?", "options": ["Tomato sauce", "Cranberry sauce", "Soy sauce", "Apple sauce"], "answer": "Cranberry sauce"},
+  {"question": "What is the main ingredient in a traditional Italian Panettone?", "options": ["Chocolate", "Dried fruit", "Cream", "Jam"], "answer": "Dried fruit"},
+  {"question": "Which spice gives mulled wine its distinctive flavor?", "options": ["Cinnamon", "Coriander", "Basil", "Oregano"], "answer": "Cinnamon"},
+  {"question": "What is the main ingredient in a Christmas stollen?", "options": ["Marzipan", "Custard", "Jam", "Honey"], "answer": "Marzipan"},
+  {"question": "Which pie is a staple at American Thanksgiving?", "options": ["Apple pie", "Pumpkin pie", "Pecan pie", "Cherry pie"], "answer": "Pumpkin pie"},
+  {"question": "What is the main ingredient in Hanukkah sufganiyot?", "options": ["Potato", "Dough", "Rice", "Corn"], "answer": "Dough"},
+  {"question": "Which herb is often used in holiday stuffing?", "options": ["Sage", "Mint", "Rosemary", "Basil"], "answer": "Sage"},
+  {"question": "What is the main ingredient in a Yule log cake?", "options": ["Chocolate sponge cake", "Vanilla pudding", "Strawberry jam", "Lemon curd"], "answer": "Chocolate sponge cake"},
+  {"question": "Which drink is often associated with New Year's Eve?", "options": ["Eggnog", "Champagne", "Hot chocolate", "Apple cider"], "answer": "Champagne"},
+  {"question": "What is the main ingredient in a Christmas trifle?", "options": ["Cake", "Rice", "Bread", "Pasta"], "answer": "Cake"},
+  {"question": "Which cookie is left out for Santa on Christmas Eve?", "options": ["Chocolate chip", "Gingerbread", "Oatmeal raisin", "Peanut butter"], "answer": "Gingerbread"},
+  {"question": "What is the main ingredient in a fruitcake?", "options": ["Dried fruit", "Chocolate", "Cream", "Nuts"], "answer": "Dried fruit"}
+] 

@@ -1,0 +1,22 @@
+[
+  {"question": "Which city is famous for its New Year's Eve ball drop?", "options": ["London", "Paris", "New York", "Sydney"], "answer": "New York"},
+  {"question": "Where is the famous Christmas market 'Christkindlesmarkt' held?", "options": ["Berlin", "Nuremberg", "Vienna", "Prague"], "answer": "Nuremberg"},
+  {"question": "Which country is known for the holiday tradition of 'La Tomatina'?", "options": ["Italy", "Spain", "France", "Portugal"], "answer": "Spain"},
+  {"question": "Where would you see the Northern Lights during the holidays?", "options": ["Australia", "Iceland", "Brazil", "South Africa"], "answer": "Iceland"},
+  {"question": "Which city is famous for its Christmas tree at Rockefeller Center?", "options": ["Los Angeles", "New York", "Chicago", "Boston"], "answer": "New York"},
+  {"question": "Which country is known for the holiday tradition of 'KFC for Christmas'?", "options": ["Japan", "USA", "Canada", "UK"], "answer": "Japan"},
+  {"question": "Where is the holiday tradition of 'Krampus' celebrated?", "options": ["Austria", "Italy", "Spain", "France"], "answer": "Austria"},
+  {"question": "Which city hosts the world's largest New Year's Eve fireworks display?", "options": ["Dubai", "London", "Sydney", "Rio de Janeiro"], "answer": "Sydney"},
+  {"question": "Where is the holiday tradition of 'Day of the Dead' celebrated?", "options": ["Mexico", "Spain", "Italy", "Brazil"], "answer": "Mexico"},
+  {"question": "Which country is famous for its Christmas sauna tradition?", "options": ["Finland", "Sweden", "Norway", "Denmark"], "answer": "Finland"},
+  {"question": "Where is the famous 'Harbin Ice Festival' held?", "options": ["Russia", "China", "Canada", "Norway"], "answer": "China"},
+  {"question": "Which city is known for its holiday 'Winter Wonderland' in Hyde Park?", "options": ["London", "Paris", "Berlin", "Rome"], "answer": "London"},
+  {"question": "Which country celebrates 'Boxing Day' as a public holiday?", "options": ["USA", "UK", "France", "Germany"], "answer": "UK"},
+  {"question": "Where is the famous 'Santa Claus Village'?", "options": ["Greenland", "Finland", "Canada", "Russia"], "answer": "Finland"},
+  {"question": "Which city is known for its 'Festival of Lights' in December?", "options": ["Lyon", "Madrid", "Rome", "Vienna"], "answer": "Lyon"},
+  {"question": "Which country is famous for its 'Christmas markets' in almost every city?", "options": ["Germany", "Italy", "France", "Spain"], "answer": "Germany"},
+  {"question": "Where is the 'Sydney to Hobart Yacht Race' held during the holidays?", "options": ["USA", "Australia", "UK", "New Zealand"], "answer": "Australia"},
+  {"question": "Which country is known for the 'Three Kings Day' parade?", "options": ["Spain", "Italy", "France", "Portugal"], "answer": "Spain"},
+  {"question": "Where is the famous 'Christmas Boat Parade' held?", "options": ["Venice", "Amsterdam", "Newport Beach", "Stockholm"], "answer": "Newport Beach"},
+  {"question": "Which country is known for the 'Holiday Train' tradition?", "options": ["Canada", "USA", "Russia", "China"], "answer": "Canada"}
+] 
