@@ -1,8 +1,9 @@
 
 // This is a client component. Do NOT use Promise for params here.
+// This is a client component using Next.js 15+ params handling
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, use } from "react";
 import { useRouter } from "next/navigation";
 
 function shuffle<T>(array: T[]): T[] {
@@ -20,11 +21,13 @@ interface Question {
   answer: string;
 }
 
+interface PageParams {
+  params: Promise<{ section: string }>;
+}
 
-
-export default function Page({ params }: { params: { section: string } }) {
+export default function Page({ params }: PageParams) {
   const router = useRouter();
-  const { section } = params;
+  const { section } = use(params);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
