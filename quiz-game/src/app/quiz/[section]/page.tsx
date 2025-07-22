@@ -1,10 +1,5 @@
 
-// This is a client component. Do NOT use Promise for params here.
-// This is a client component using Next.js 15+ params handling
-"use client";
-
-import { useEffect, useState, use } from "react";
-import { useRouter } from "next/navigation";
+import { Suspense } from "react";
 
 function shuffle<T>(array: T[]): T[] {
   return array
