@@ -16,7 +16,7 @@ interface Question {
   answer: string;
 }
 
-export default function QuizPage({ params }: { params: { section: string } }) {
+export default function Page({ params }: { params: { section: string } }) {
   const router = useRouter();
   const { section } = params;
   const [questions, setQuestions] = useState<Question[]>([]);
