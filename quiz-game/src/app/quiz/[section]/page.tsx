@@ -10,13 +10,20 @@ function shuffle<T>(array: T[]): T[] {
     .map(([, a]) => a);
 }
 
+
 interface Question {
   question: string;
   options: string[];
   answer: string;
 }
 
-export default function Page({ params }: { params: { section: string } }) {
+interface PageProps {
+  params: {
+    section: string;
+  };
+}
+
+export default function Page({ params }: PageProps) {
   const router = useRouter();
   const { section } = params;
   const [questions, setQuestions] = useState<Question[]>([]);
