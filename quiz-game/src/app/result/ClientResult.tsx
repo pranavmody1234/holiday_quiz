@@ -1,11 +1,14 @@
 "use client";
-
-import { Suspense, useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import ClientResult from "./ClientResult";
-import { LeaderboardEntry } from "@/types";
+import { useEffect, useState } from "react";
 
-function ResultPage() {
+interface LeaderboardEntry {
+  name: string;
+  category: string;
+  score: string;
+}
+
+export default function ClientResult() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const score = Number(searchParams.get("score"));
@@ -119,13 +122,5 @@ function ResultPage() {
         </button>
       </div>
     </main>
-  );
-}
-
-export default function PageWrapper() {
-  return (
-    <Suspense fallback={<div className='flex justify-center items-center min-h-screen'>Loading...</div>}>
-      <ResultPage />
-    </Suspense>
   );
 }
