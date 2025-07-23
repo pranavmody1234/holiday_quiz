@@ -26,7 +26,7 @@ export default function ClientQuiz({ section }: { section: string }) {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch(`/questions/${section}.json`)
+    fetch(`/questions/${section}.json`, { cache: 'no-store' })
       .then((res) => {
         if (!res.ok) throw new Error("Quiz not found");
         return res.json();
