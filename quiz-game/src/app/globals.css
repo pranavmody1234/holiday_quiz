@@ -1,8 +1,9 @@
+@import "tailwindcss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Light theme defaults */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,7 +11,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Dark mode override */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -18,12 +18,10 @@
   }
 }
 
-/* Apply base layout styles */
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
 }
