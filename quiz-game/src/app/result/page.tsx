@@ -4,6 +4,7 @@ import { Suspense, useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import ClientResult from "./ClientResult";
 import { LeaderboardEntry } from "@/types";
+import "./result.css";
 
 function ResultPage() {
   const searchParams = useSearchParams();
@@ -60,14 +61,14 @@ function ResultPage() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-pink-50 px-4">
-      <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-8 flex flex-col items-center">
-        <h2 className="text-3xl font-bold mb-4">Quiz Complete!</h2>
-        <p className="text-xl mb-6">You scored <span className="font-bold">{score}</span> out of <span className="font-bold">{total}</span></p>
+    <main className="result-main">
+      <div className="result-container">
+        <h2 className="result-title">Quiz Complete!</h2>
+        <p className="result-score">You scored <span style={{fontWeight:'bold'}}>{score}</span> out of <span style={{fontWeight:'bold'}}>{total}</span></p>
         {!submitted ? (
-          <form onSubmit={handleSubmit} className="w-full flex flex-col items-center mb-4">
+          <form onSubmit={handleSubmit} className="result-form">
             <input
-              className="mb-2 px-4 py-2 border rounded w-full"
+              className="result-input"
               type="text"
               placeholder="Enter your name"
               value={name}
@@ -76,27 +77,27 @@ function ResultPage() {
               maxLength={20}
             />
             <button
-              className="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 w-full"
+              className="result-btn"
               type="submit"
               disabled={loading}
             >
               {loading ? "Submitting..." : "Submit Score"}
             </button>
-            {error && <div className="text-red-500 mt-2">{error}</div>}
+            {error && <div className="result-error">{error}</div>}
           </form>
         ) : (
           <>
-            <h3 className="text-2xl font-semibold mb-2">Leaderboard</h3>
+            <h3 className="result-leaderboard-title">Leaderboard</h3>
             {loading ? (
               <div>Loading leaderboard...</div>
             ) : error ? (
-              <div className="text-red-500">{error}</div>
+              <div className="result-error">{error}</div>
             ) : leaderboard.length === 0 ? (
               <div>No leaderboard entries for this quiz yet.</div>
             ) : (
-              <ol className="w-full mb-4">
+              <ol className="result-leaderboard-list">
                 {leaderboard.map((entry, i) => (
-                  <li key={i} className="flex justify-between border-b py-1">
+                  <li key={i} className="result-leaderboard-item">
                     <span>{i + 1}. {entry.name}</span>
                     <span>{entry.score}</span>
                   </li>
@@ -106,13 +107,14 @@ function ResultPage() {
           </>
         )}
         <button
-          className="mb-3 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          className="result-btn"
+          style={{marginBottom: '0.75rem'}}
           onClick={() => router.back()}
         >
           Play Again
         </button>
         <button
-          className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+          className="result-btn secondary"
           onClick={() => router.push("/")}
         >
           Back to Main Menu
