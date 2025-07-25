@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import "./quiz.css";
 
 function shuffle<T>(array: T[]): T[] {
   return array
@@ -61,32 +62,30 @@ export default function ClientQuiz({ section }: { section: string }) {
     }
   }, [selected, current, questions, router, score, section]);
 
-  if (loading) return <div className="flex justify-center items-center min-h-screen">Loading...</div>;
-  if (error) return <div className="flex justify-center items-center min-h-screen text-red-500">{error}</div>;
+  if (loading) return <div className="quiz-loading">Loading...</div>;
+  if (error) return <div className="quiz-error">{error}</div>;
   if (!questions.length) return null;
 
   const q = questions[current];
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-pink-50 px-4">
-      <div className="w-full max-w-xl bg-white rounded-lg shadow-lg p-8">
-        <h2 className="text-2xl font-bold mb-4">Question {current + 1} of {questions.length}</h2>
-        <p className="mb-6 text-lg">{q.question}</p>
-        <div className="space-y-3 mb-6">
+    <main>
+      <div className="quiz-container">
+        <h2 className="quiz-question">Question {current + 1} of {questions.length}</h2>
+        <p className="quiz-text">{q.question}</p>
+        <div className="quiz-options">
           {q.options.map((option) => {
-            let btnClass = "w-full px-4 py-2 rounded border text-left transition-all duration-150 ";
+            let btnClass = "quiz-option-btn ";
             if (selected !== null) {
               if (option === selected && option !== q.answer) {
-                // Wrong answer selected
-                btnClass += "bg-red-200 border-red-500 ";
+                btnClass += "quiz-option-wrong ";
               } else if (option === q.answer) {
-                // Show correct answer in green
-                btnClass += "bg-green-200 border-green-500 ";
+                btnClass += "quiz-option-correct ";
               } else {
-                btnClass += "bg-gray-100 border-gray-300 ";
+                btnClass += "quiz-option-default ";
               }
             } else {
-              btnClass += "bg-gray-100 border-gray-300 hover:bg-blue-100 ";
+              btnClass += "quiz-option-default ";
             }
             return (
               <button
