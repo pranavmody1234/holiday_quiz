@@ -1,26 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
-
-
-function getCsvPath(category: string) {
-  // Sanitize category to avoid path traversal
-  const safeCategory = category.replace(/[^a-zA-Z0-9_-]/g, "");
-  return path.join(process.cwd(), "src", "leaderboard", `leaderboard_${safeCategory}.csv`);
-}
-
-function parseCSV(data: string) {
-  const [header, ...rows] = data.trim().split("\n");
-  const keys = header.split(",");
-  return rows.map(row => {
-    const values = row.split(",");
-    return Object.fromEntries(keys.map((k, i) => [k, values[i]]));
-  });
-}
-
-function toCSVRow(obj: Record<string, string>) {
-  return `${obj.name},${obj.category},${obj.score}`;
-}
+import { supabase } from "./supabase";
 
 
 // GET /api/leaderboard?category=recipe
@@ -30,14 +9,17 @@ export async function GET(req: NextRequest) {
   if (!category) {
     return NextResponse.json({ error: "Missing category parameter." }, { status: 400 });
   }
-  const csvPath = getCsvPath(category);
-  try {
-    const data = await fs.readFile(csvPath, "utf-8");
-    const leaderboard = parseCSV(data);
-    return NextResponse.json({ leaderboard });
-  } catch (err) {
+  // Fetch leaderboard from Supabase
+  const { data, error } = await supabase
+    .from("leaderboard")
+    .select("name,category,score")
+    .eq("category", category)
+    .order("score", { ascending: false })
+    .limit(10);
+  if (error) {
     return NextResponse.json({ error: "Could not read leaderboard." }, { status: 500 });
   }
+  return NextResponse.json({ leaderboard: data });
 }
 
 export async function POST(req: NextRequest) {
@@ -46,19 +28,12 @@ export async function POST(req: NextRequest) {
     if (!name || !category || typeof score !== "number") {
       return NextResponse.json({ error: "Missing fields." }, { status: 400 });
     }
-    const csvPath = getCsvPath(category);
-    const row = toCSVRow({ name, category, score: String(score) });
-    let fileExists = true;
-    try {
-      await fs.access(csvPath);
-    } catch {
-      fileExists = false;
-    }
-    if (!fileExists) {
-      // Write header and first row
-      await fs.writeFile(csvPath, `name,category,score\n${row}`);
-    } else {
-      await fs.appendFile(csvPath, `\n${row}`);
+    // Insert score into Supabase
+    const { error } = await supabase
+      .from("leaderboard")
+      .insert([{ name, category, score }]);
+    if (error) {
+      return NextResponse.json({ error: "Could not save score." }, { status: 500 });
     }
     return NextResponse.json({ success: true });
   } catch (err) {
