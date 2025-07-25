@@ -15,6 +15,7 @@ interface Question {
   question: string;
   options: string[];
   answer: string;
+  explanation?: string;
 }
 
 export default function ClientQuiz({ section }: { section: string }) {
@@ -25,6 +26,8 @@ export default function ClientQuiz({ section }: { section: string }) {
   const [score, setScore] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [showExplanation, setShowExplanation] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     fetch(`/questions/${section}.json`, { cache: 'no-store' })
@@ -46,7 +49,19 @@ export default function ClientQuiz({ section }: { section: string }) {
 
   useEffect(() => {
     if (selected !== null) {
+      setShowExplanation(true);
+      setProgress(0);
+      const duration = 5000; // 5 seconds
+      const interval = 50;
+      let elapsed = 0;
+      const progressTimer = setInterval(() => {
+        elapsed += interval;
+        setProgress(Math.min(100, (elapsed / duration) * 100));
+      }, interval);
       const timer = setTimeout(() => {
+        clearInterval(progressTimer);
+        setShowExplanation(false);
+        setProgress(0);
         if (selected === questions[current].answer) {
           setScore((s) => s + 1);
         }
@@ -54,11 +69,13 @@ export default function ClientQuiz({ section }: { section: string }) {
         if (current + 1 < questions.length) {
           setCurrent((c) => c + 1);
         } else {
-          // Pass section for leaderboard
           router.push(`/result?score=${score + (selected === questions[current].answer ? 1 : 0)}&total=${questions.length}&section=${section}`);
         }
-      }, 1200);
-      return () => clearTimeout(timer);
+      }, duration);
+      return () => {
+        clearTimeout(timer);
+        clearInterval(progressTimer);
+      };
     }
   }, [selected, current, questions, router, score, section]);
 
@@ -99,6 +116,18 @@ export default function ClientQuiz({ section }: { section: string }) {
             );
           })}
         </div>
+        {showExplanation && (
+          <div className="quiz-explanation-box">
+            <div className="quiz-explanation">
+              <strong>Correct Answer:</strong> {q.answer}<br />
+              <span>{q.explanation}</span>
+            </div>
+            <div className="quiz-progress-bar">
+              <div className="quiz-progress" style={{ width: `${progress}%` }}></div>
+            </div>
+            <div className="quiz-next-label">Next question in {Math.ceil((100 - progress) / 50)}s...</div>
+          </div>
+        )}
       </div>
     </main>
   );
