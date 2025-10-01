@@ -1,0 +1,100 @@
+{
+  "title": "Holiday Party Checklist",
+  "steps": [
+    {
+      "id": "location",
+      "question": "Where will you host the party?",
+      "type": "single",
+      "options": ["Dallas", "New York", "Seattle", "Las Vegas", "Florida", "Austin", "Chicago", "San Francisco"],
+      "help": "Choose the city/area closest to your venue."
+    },
+    {
+      "id": "holiday",
+      "question": "Which holiday are you celebrating?",
+      "type": "single",
+      "options": ["Christmas", "New Year’s Eve", "Thanksgiving", "Halloween", "Easter", "Hanukkah", "Diwali"],
+      "help": "We’ll tailor themes, food, and activities to your holiday."
+    },
+    {
+      "id": "theme",
+      "question": "Pick a party theme",
+      "type": "single",
+      "options": [
+        "Cozy Winter Wonderland",
+        "Glam Gold & Black",
+        "Rustic Harvest",
+        "Spooky Chic",
+        "Spring Garden",
+        "Festival of Lights",
+        "Neon Glow"
+      ],
+      "help": "Themes influence decor colors, lighting, and music vibe."
+    },
+    {
+      "id": "venue",
+      "question": "What type of venue do you prefer?",
+      "type": "single",
+      "options": ["Home", "Backyard/Patio", "Restaurant Private Room", "Community Hall", "Rooftop", "Event Space"],
+      "help": "We’ll adapt layout and decor to the venue type."
+    },
+    {
+      "id": "guests",
+      "question": "How many guests do you expect?",
+      "type": "single",
+      "options": ["Under 10", "10-20", "20-40", "40-75", "75-120", "120+"],
+      "help": "We’ll scale seating, catering, and activities accordingly."
+    },
+    {
+      "id": "budget",
+      "question": "What’s your estimated budget?",
+      "type": "single",
+      "options": ["$200-$500", "$500-$1,000", "$1,000-$2,500", "$2,500-$5,000", "$5,000+"],
+      "help": "We’ll recommend options within your range."
+    },
+    {
+      "id": "food",
+      "question": "Food & drinks preferences",
+      "type": "multi",
+      "options": ["Buffet", "Plated", "Finger Foods", "Dessert Bar", "Mocktails", "Cocktails", "BYOB"],
+      "help": "Select all that apply."
+    },
+    {
+      "id": "activities",
+      "question": "What kind of activities do you want?",
+      "type": "multi",
+      "options": ["Photo Booth", "Trivia/Games", "Dance Floor", "Live Music/DJ", "Gift Exchange", "Karaoke"],
+      "help": "We’ll tailor the schedule and space."
+    },
+    {
+      "id": "decor",
+      "question": "Decor style preferences",
+      "type": "multi",
+      "options": ["String Lights", "Candles", "Balloons", "Garlands/Wreaths", "Table Centerpieces", "Themed Backdrop"],
+      "help": "Pick decor elements you like."
+    },
+    {
+      "id": "date",
+      "question": "When are you planning the party?",
+      "type": "single",
+      "options": ["Weeknight", "Friday", "Saturday", "Sunday", "Undecided"],
+      "help": "We’ll propose a sample timeline for your date."
+    }
+  ],
+  "recommendations": {
+    "New Year’s Eve": {
+      "music": ["Top 40 party hits", "Dance/EDM", "Countdown playlist"],
+      "decor": ["Gold & black balloons", "LED countdown clock", "Sparkler station"],
+      "activities": ["Resolution wall", "Countdown toast", "Photo booth"]
+    },
+    "Christmas": {
+      "music": ["Upbeat carols", "Jazz Christmas", "Acoustic holiday"],
+      "decor": ["Warm string lights", "Evergreen garlands", "Red & gold accents"],
+      "activities": ["White elephant", "Cookie decorating", "Caroling"]
+    },
+    "Halloween": {
+      "music": ["Spooky pop", "Classic Halloween", "Ambient eerie"],
+      "decor": ["Candles & cobwebs", "Themed backdrop", "Orange & purple lighting"],
+      "activities": ["Costume contest", "Spooky trivia", "Pumpkin carving"]
+    }
+  }
+}
