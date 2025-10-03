@@ -17,6 +17,6 @@
   {"question": "What is the main food for Passover?", "options": ["Matzah", "Bread", "Rice", "Pasta"], "answer": "Matzah", "explanation": "Matzah, unleavened bread, is eaten during Passover to commemorate the Exodus from Egypt."},
   {"question": "Which holiday is celebrated on October 31st?", "options": ["Halloween", "Thanksgiving", "Christmas", "Easter"], "answer": "Halloween", "explanation": "Halloween is celebrated on October 31st, known for costumes and trick-or-treating."},
   {"question": "What is the main symbol of Ramadan?", "options": ["Crescent moon", "Star", "Tree", "Egg"], "answer": "Crescent moon", "explanation": "The crescent moon is a symbol of Ramadan, marking the start of the Islamic holy month."},
-  {"question": "Which holiday is known for lighting candles for 8 nights?", "options": ["Hanukkah", "Diwali", "Christmas", "Eid"], "answer": "Hanukkah", "explanation": "Hanukkah is celebrated by lighting candles on the menorah for 8 nights."},
+  {"question": "Which holiday is known for lighting candles for 8 nights?", "options": ["Hanukkah", "Diwali", "Kwanzaa", "Eid"], "answer": "Hanukkah", "explanation": "Hanukkah is celebrated by lighting candles on the menorah for 8 nights."},
   {"question": "Which holiday is celebrated with a maypole dance?", "options": ["May Day", "Christmas", "Easter", "Halloween"], "answer": "May Day", "explanation": "May Day is celebrated with maypole dances, marking the arrival of spring."}
 ] 

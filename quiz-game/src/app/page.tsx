@@ -5,7 +5,7 @@ const sections = [
   { key: "recipe", label: "Holiday Recipe Quiz" },
   { key: "travelling", label: "Holiday Travelling Quiz" },
   { key: "gk", label: "Holiday General Knowledge Quiz" },
-  { key: "party-checklist", label: "Holiday Party Checklist" },
+  // { key: "party-checklist", label: "Holiday Party Checklist" }, // temporarily hidden
   { key: "movies", label: "Holiday Movies Quiz (Coming Soon)" },
 ];
 
